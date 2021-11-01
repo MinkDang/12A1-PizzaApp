@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-        <!-- Hamburger button -->
+		<!-- Hamburger button -->
 		<a
 			href="javascript:void(0)"
 			onclick="document.getElementById('light').style.display='flex';document.getElementById('fade').style.display='block'"
@@ -23,7 +23,7 @@
 			</div>
 		</a>
 
-        <!-- Hamburger action -->
+		<!-- Hamburger action -->
 		<div id="light" class="content">
 			<a href="shopindex.html">Pizzeria Interface</a>
 			<a
@@ -34,31 +34,39 @@
 		</div>
 		<div id="fade" class="black_overlay"></div>
 
+		<!-- Top left logo -->
 		<div id="logo">
 			<img src="/Assets/Logo.png" alt="Logo" width="100vh" />
 		</div>
 
-        <!-- Main action -->
-        <div>
-            <h1>SELECT AN ORDER TYPE</h1>
-        </div>
-        <div id="selection">
-            <div class="box">
-                <img src="/Assets/History.svg" alt="Order history icon" />
-                <h2>ORDER HISTORY</h2>
-            </div>
+		<!-- Main action -->
+		<div>
+			<h1>SELECT AN ORDER TYPE</h1>
+		</div>
+		<div id="selection">
+			<div class="box">
+				<a href="History.html">
+					<img src="/Assets/History.svg" alt="Order history icon" />
+					<h2>ORDER HISTORY</h2>
+				</a>
+			</div>
 
-            <div class="box">
-                <img src="/Assets/Delivery.svg" alt="Delivery icon" />
-                <h2>DELIVERY</h2>
-            </div>
+			<div class="box">
+				<a href="Delivery.html">
+					<img src="/Assets/Delivery.svg" alt="Delivery icon" />
+					<h2>DELIVERY</h2>
+				</a>
+			</div>
 
-            <div class="box">
-                <img src="/Assets/Pick Up.svg" alt="Pick up icon" />
-                <h2>PICK UP</h2>
-            </div>
-        </div>
-		
+			<div class="box">
+				<a href="Pick up.html">
+					<img src="/Assets/Pick Up.svg" alt="Pick up icon" />
+					<h2>PICK UP</h2>
+				</a>
+			</div>
+		</div>
+
+		<!-- Contact -->
 		<div id="contact">
 			<div>
 				<img src="/Assets/Phone.svg" alt="Phone icon" />
