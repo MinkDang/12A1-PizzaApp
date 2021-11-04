@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html {
+	font-size: 100%;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+	background: #ffecd9;
+	color: #424242;
+	font-family: 'Raleway', Sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #424242;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+p {
+	margin: 0;
+	font-size: 20px;
+}
+
+strong {
+	font-size: 20px;
+}
+
+/* Navigation panel */
+
+#navigation_panel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0px 0px 10px 10px;
+	border: 2px solid #424242;
+	padding: 10px 10px;
+	width: 80%;
+	position: absolute;
+	top: 0;
+	background-color: rgb(242, 226, 140);
+}
+
+#navigation_panel div {
+	display: flex;
+	align-items: center;
+}
+
+#navigation_panel img {
+	width: 40px;
+}
+
+/* Base displaying option */
+
+#parent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+}
+
+#base_displaying_panel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#base_displaying_panel> div {
+	margin-top: 20px;
+}
+
+.name_pricetag {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	width: 250px;
+}
+
+.base_info {
+	display: flex;
+}
+
+.base_info > img{
+	width: 250px;
+	height: 100%;
+	margin-right: 10px;
+}
+
+.more_details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 80%;
+}
+
+.more_details > div > strong {
+	color: rgb(40, 189, 40);
+}
+
+.select {
+	display: flex;
+	align-items: center;
+}
+
+.select > a {
+	margin-right: 10px;
+	background-color: rgb(184, 217, 220);
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 2px solid #424242;
+}
+
+/* Contact */
+#contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 70px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(220, 220, 220);
+	border-radius: 10px 10px 0 0;
+	-webkit-box-shadow: 0 0 15px rgb(146, 146, 146);
+	box-shadow: 0 0 15px rgb(146, 146, 146);
+}
+
+#contact div {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    margin-left: 10px;
+}
+
+#contact img {
+	width: 50px;
+	margin: 0 5px;
+}
+
+/* Top left logo */
+#logo {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
