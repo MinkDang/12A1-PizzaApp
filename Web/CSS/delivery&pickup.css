@@ -65,7 +65,8 @@ label {
 	margin-bottom: 5px;
 }
 
-#store, #zip {
+#store,
+#zip {
 	font-size: 15px;
 }
 
@@ -79,21 +80,18 @@ label {
 
 /* Next button */
 #sub_button {
-	position: absolute;
-	bottom: 150px;
-	background-color: rgb(184, 217, 220);
-	border: 2px solid #424242;
-	border-radius: 10px;
-	padding: 10px 10px;
-}
-
-#sub_button > div {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	position: absolute;
+	bottom: 150px;
+	background-color: rgb(184, 217, 220);
+	border: 2px solid #424242;
+	border-radius: 10px;
+	padding: 10px 10px;
 }
 
 #sub_button strong {

@@ -1,0 +1,25 @@
+#navigation_panel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0px 0px 10px 10px;
+	border: 2px solid #424242;
+	padding: 10px 10px;
+	width: 60%;
+	position: absolute;
+	top: 0;
+	background-color: rgb(242, 226, 140);
+}
+
+#navigation_panel a {
+	display: flex;
+	align-items: center;
+}
+
+#navigation_panel img {
+	width: 40px;
+}
+
+#current_color {
+	color: rgb(59, 194, 154);
+}
