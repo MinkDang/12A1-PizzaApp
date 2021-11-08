@@ -20,7 +20,7 @@
 		</div>
 
 		<div>
-			<h1>DELIVERY TIME</h1>
+			<h1>PICK UP</h1>
 		</div>
 
 		<div id="parent_container">
@@ -51,21 +51,13 @@
 
 			<!-- Form -->
 			<form>
-				<label for="zip">Postcode</label>
-				<input
-					id="zip"
-					name="zip"
-					type="text"
-					pattern="[0-9]{4}"
-					placeholder="Enter post code"
-					required="required"
-				/>
-				<input
-					type="submit"
-					name="submit"
-					id="main_submit"
-					style="display: none"
-				/>
+				<label for="store">Store</label>
+				<select name="store" id="store">
+					<option value="Glebe">Glebe</option>
+					<option value="Redfern">Redfern</option>
+					<option value="Paddington">Paddington</option>
+					<option value="Newtown">Newtown</option>
+				</select>
 
 				<div id="delivery_time">
 					<label for="time">Delivery Time</label>
