@@ -1,0 +1,101 @@
+@import 'Reuse/universal.css';
+@import 'Reuse/contact_ver.css';
+
+#parent_container {
+	height: 50%;
+}
+
+/* Now or Later */
+#timeoption {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: 40px;
+	margin: 10px 0 50px 0;
+}
+
+#timeoption_now {
+	border-radius: 10px;
+	border: 2px solid #424242;
+	padding: 10px 10px;
+}
+
+#timeoption a:nth-child(2) {
+	margin-left: 20px;
+}
+
+#timeoption_later {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 2px solid #424242;
+}
+
+#timeoption_later img {
+	width: 25px;
+}
+
+/* Form */
+form,
+#delivery_time {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 210px;
+}
+
+label {
+	font-size: 25px;
+	margin-bottom: 5px;
+}
+
+#store, #zip {
+	font-size: 15px;
+}
+
+#time {
+	font-size: 14px;
+}
+
+#delivery_time {
+	margin-top: 10px;
+}
+
+/* Next button */
+#sub_button {
+	position: absolute;
+	bottom: 150px;
+	background-color: rgb(184, 217, 220);
+	border: 2px solid #424242;
+	border-radius: 10px;
+	padding: 10px 10px;
+}
+
+#sub_button > div {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+#sub_button strong {
+	margin-right: 10px;
+}

@@ -1,0 +1,44 @@
+@import 'Reuse/universal.css';
+@import 'Reuse/contact_ver.css';
+
+/* Now or later */
+#timeoption {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: 40px;
+	margin: 10px 0 50px 0;
+}
+
+#timeoption_now {
+	border-radius: 10px;
+	border: 2px solid #424242;
+	padding: 10px 10px;
+}
+
+#timeoption a:nth-child(2) {
+	margin-left: 20px;
+}
+
+#timeoption_later {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 2px solid #424242;
+}
+
+#timeoption_later img {
+	width: 25px;
+}

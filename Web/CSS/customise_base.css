@@ -1,52 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-html {
-	font-size: 100%;
-}
-
-html,
-body {
-	margin: 0;
-	height: 100%;
-}
-
-body {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-
-	background: #ffecd9;
-	color: #424242;
-	font-family: 'Raleway', Sans-serif;
-}
-
-a {
-	text-decoration: none;
-	color: #424242;
-}
-
-h1 {
-	font-size: 50px;
-}
-
-p {
-	margin: 0;
-	font-size: 20px;
-}
-
-strong {
-	font-size: 20px;
-}
+@import 'Reuse/universal.css';
+@import 'Reuse/contact_hor.css';
 
 /* Navigation panel */
 
@@ -57,7 +10,7 @@ strong {
 	border-radius: 0px 0px 10px 10px;
 	border: 2px solid #424242;
 	padding: 10px 10px;
-	width: 80%;
+	width: 60%;
 	position: absolute;
 	top: 0;
 	background-color: rgb(242, 226, 140);
@@ -130,50 +83,4 @@ strong {
 	padding: 10px 10px;
 	border-radius: 10px;
 	border: 2px solid #424242;
-}
-
-/* Contact */
-#contact {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	height: 70px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	background-color: rgb(220, 220, 220);
-	border-radius: 10px 10px 0 0;
-	-webkit-box-shadow: 0 0 15px rgb(146, 146, 146);
-	box-shadow: 0 0 15px rgb(146, 146, 146);
-}
-
-#contact div {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-    margin-left: 10px;
-}
-
-#contact img {
-	width: 50px;
-	margin: 0 5px;
-}
-
-/* Top left logo */
-#logo {
-	-ms-flex-item-align: start;
-	align-self: flex-start;
-	left: 0;
-	top: 0;
-	position: absolute;
 }

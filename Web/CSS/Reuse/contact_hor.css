@@ -1,0 +1,35 @@
+#contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 70px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(220, 220, 220);
+	border-radius: 10px 10px 0 0;
+	-webkit-box-shadow: 0 0 15px rgb(146, 146, 146);
+	box-shadow: 0 0 15px rgb(146, 146, 146);
+}
+
+#contact div {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    margin-left: 10px;
+}
+
+#contact img {
+	width: 50px;
+	margin: 0 5px;
+}
