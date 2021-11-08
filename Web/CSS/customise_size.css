@@ -1,6 +1,10 @@
 @import 'Reuse/universal.css';
 @import 'Reuse/contact_hor.css';
 
+h2 {
+    margin-bottom: 10px;
+}
+
 /* Navigation panel */
 
 #navigation_panel {
@@ -25,61 +29,32 @@
 	width: 40px;
 }
 
-/* Base displaying option */
+/* Size displaying option */
 
 #parent {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 60%;
-}
-
-#base_displaying_panel {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-#base_displaying_panel> div {
-	margin-top: 20px;
-}
-
-.name_pricetag {
-	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
-	width: 250px;
+	width: 60%;
+    max-width: 1000px;
+    min-width: 780px;
+    margin-top: -7vh;
 }
 
-.base_info {
-	display: flex;
-}
-
-.base_info > img{
+#parent img {
 	width: 250px;
 	height: 100%;
-	margin-right: 10px;
-	border-radius: 10px;
-}
-
-.more_details {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 80%;
-}
-
-.more_details > div > strong {
-	color: rgb(40, 189, 40);
+	margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .select {
 	display: flex;
-	align-items: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .select > a {
-	margin-right: 10px;
 	background-color: rgb(184, 217, 220);
 	padding: 10px 10px;
 	border-radius: 10px;
