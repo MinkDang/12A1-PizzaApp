@@ -1,0 +1,44 @@
+@import 'Reuse/universal.css';
+@import 'Reuse/contact_hor.css';
+@import 'Reuse/navigation_panel.css';
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Topping displaying option */
+
+#parent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 60%;
+    max-width: 1000px;
+    min-width: 780px;
+    margin-top: -7vh;
+}
+
+#parent img {
+	width: 100px;
+	height: 100%;
+	margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#parent > div {
+	display: flex;
+	flex-direction: column;
+}
+
+#parent > div > strong {
+	margin-bottom: 10px;
+}
+
+#parent > div > a {
+	display: flex;
+	width: 72px;
+	background-color: rgb(184, 217, 220);
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 2px solid #424242;
+}
