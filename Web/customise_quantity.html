@@ -4,9 +4,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Better support for mobile browsers -->
-		<title>Pizza Shop - Toppings</title>
+		<title>Pizza Shop - Quantity</title>
 		<link rel="icon" href="../Assets/Logo.png" />
-		<link href="CSS/customise_toppings.css" rel="stylesheet" />
+		<link href="CSS/customise_quantity.css" rel="stylesheet" />
 		<!-- <script src="Script/v1.01.js" type="text/javascript"></script> 
         Add JS later-->
 	</head>
@@ -28,57 +28,39 @@
 				<img src="../Assets/SVGs/Indicator.svg" alt="Indicator icon" />
 				<strong>SIZE</strong>
 			</a>
-			<a>
+			<a href="customise_toppings.html">
 				<img src="../Assets/SVGs/Indicator.svg" alt="Indicator icon" />
-				<strong id="current_color">TOPPINGS</strong>
+				<strong>TOPPINGS</strong>
 			</a>
 			<a>
 				<img src="../Assets/SVGs/Indicator.svg" alt="Indicator icon" />
-				<strong>QUANTITY</strong>
+				<strong id="current_color">QUANTITY</strong>
 			</a>
 		</div>
 
 		<!-- Main panel -->
 		<div id="parent">
-			
-			<!-- Anchovies -->
+			<form>
+				<!-- Quantity -->
+				<label for="quantity">Quantity</label>
+				<input
+					id="quantity"
+					name="zip"
+					type="text"
+					pattern="[0-9]{1}"
+					placeholder="Enter quantity"
+					required
+				/>
+				<input
+					type="submit"
+					name="submit"
+					id="quantity_submit"
+					value="Finalising order"
+				/>
+			</form>
 			<div>
-				<h2>Anchovies</h2>
-				<strong>+ $2</strong>
-				<img src="../Assets/Toppings/Anchovies.png" alt="Anchovies image" />
-				<a>
-					<strong>SELECT</strong>
-				</a>
-			</div>
-
-			<!-- Chili Flakes -->
-			<div>
-				<h2>Chili Flakes</h2>
-				<strong>+ $0</strong>
-				<img src="../Assets/Toppings/Chili Flakes.png" alt="Chili flakes image" />
-				<a>
-					<strong>SELECT</strong>
-				</a>
-			</div>
-
-			<!-- Jalapenos -->
-			<div>
-				<h2>Jalapenos</h2>
-				<strong>+ $2</strong>
-				<img src="../Assets/Toppings/Jalapenos.png" alt="Jalapenos image" />
-				<a>
-					<strong>SELECT</strong>
-				</a>
-			</div>
-
-			<!-- Olives -->
-			<div>
-				<h2>Olives</h2>
-				<strong>+ $1.50</strong>
-				<img src="../Assets/Toppings/Olives.png" alt="Olives image" />
-				<a>
-					<strong>SELECT</strong>
-				</a>
+				<strong>Order Summary</strong>
+				<textarea id = "order_summary" cols = "30" rows = "4"></textarea>
 			</div>
 		</div>
 

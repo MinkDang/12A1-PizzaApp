@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Better support for mobile browsers -->
 		<title>Pizza Shop - Pickup</title>
-		<link rel="icon" href="/Assets/Logo.png" />
+		<link rel="icon" href="../Assets/Logo.png" />
 		<link href="CSS/delivery&pickup.css" rel="stylesheet" />
 		<!-- <script src="Script/v1.01.js" type="text/javascript"></script> 
         Add JS later-->
@@ -15,7 +15,7 @@
 		<!-- Top left logo -->
 		<div id="logo">
 			<a href="index.html">
-				<img src="/Assets/Logo.png" alt="Logo" width="100vh" />
+				<img src="../Assets/Logo.png" alt="Logo" width="100vh" />
 			</a>
 		</div>
 
@@ -25,8 +25,10 @@
 		</div>
 
 		<div id="parent_container">
+
 			<!-- Select Delivery type -->
 			<div id="timeoption">
+
 				<!-- Now -->
 				<a
 					href="javascript:void(0)"
@@ -38,6 +40,7 @@
 						<strong>NOW</strong>
 					</div>
 				</a>
+
 				<!-- Later -->
 				<a
 					href="javascript:void(0)"
@@ -46,7 +49,7 @@
 					document.getElementById('delivery_time').style.visibility='visible';"
 				>
 					<div id="timeoption_later">
-						<img src="/Assets/SVGs/Clock.svg" alt="Clock icon" />
+						<img src="../Assets/SVGs/Clock.svg" alt="Clock icon" />
 						<strong>LATER</strong>
 					</div>
 				</a>
@@ -54,6 +57,8 @@
 
 			<!-- Form -->
 			<form>
+
+				<!-- Store -->
 				<label for="store">Store</label>
 				<select name="store" id="store">
 					<option value="Glebe">Glebe</option>
@@ -62,13 +67,14 @@
 					<option value="Newtown">Newtown</option>
 				</select>
 
+				<!-- Delivery Time -->
 				<div id="delivery_time">
 					<label for="time">Delivery Time</label>
 					<input
 						type="datetime-local"
 						id="time"
 						name="time"
-						required="required"
+						required
 					/>
 					<input
 						type="submit"
@@ -77,23 +83,36 @@
 						style="display: none"
 					/>
 				</div>
+
+				<!-- Phone -->
+				<div id="phone_number">
+					<label for="phone">Phone number</label>
+					<input
+						type="tel"
+						id="phone"
+						name="phone"
+						placeholder="Enter phone number"
+						pattern="[0-9]{10}"
+						required
+					/>
+				</div>
 			</form>
 		</div>
 
 		<!-- Add href -->
 		<a id="sub_button">
 			<strong>NEXT</strong>
-			<img src="/Assets/SVGs/arrow-right-circle.svg" alt="Next icon" />
+			<img src="../Assets/SVGs/arrow-right-circle.svg" alt="Next icon" />
 		</a>
 
-		<!-- Contact -->
+		<!-- Bottom panel - Contact-->
 		<div id="contact">
 			<div>
-				<img src="/Assets/SVGs/Phone.svg" alt="Phone icon" />
+				<img src="../Assets/SVGs/Phone.svg" alt="Phone icon" />
 				<h3>131 000</h3>
 			</div>
 			<div>
-				<img src="/Assets/SVGs/Mail.svg" alt="Mail icon" />
+				<img src="../Assets/SVGs/Mail.svg" alt="Mail icon" />
 				<h3>support@pizza.xyz</h3>
 			</div>
 		</div>
