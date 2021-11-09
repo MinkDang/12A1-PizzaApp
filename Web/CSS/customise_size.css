@@ -1,5 +1,5 @@
 @import 'Reuse/universal.css';
-@import 'Reuse/contact_hor.css';
+@import 'Reuse/bottom_panel.css';
 @import 'Reuse/navigation_panel.css';
 
 h2 {
@@ -9,9 +9,15 @@ h2 {
 /* Size displaying option */
 
 #parent {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 60%;
     max-width: 1000px;
     min-width: 780px;
@@ -26,9 +32,15 @@ h2 {
 }
 
 .select {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .select > a {
