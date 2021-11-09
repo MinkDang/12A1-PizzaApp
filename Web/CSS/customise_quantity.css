@@ -1,0 +1,58 @@
+@import 'Reuse/universal.css';
+@import 'Reuse/navigation_panel.css';
+@import 'Reuse/bottom_panel.css';
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Topping displaying option */
+
+#parent {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 300px;
+    margin-top: -7vh;
+}
+
+#parent > form,
+#parent > div {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-size: 25px;
+	margin-bottom: 5px;
+}
+
+#quantity {
+	font-size: 15px;
+}
+
+#parent > div > strong {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+textarea {
+	font-size: 15px;
+}
+
+#quantity_submit {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-self: center;
+	position: absolute;
+	bottom: 150px;
+	background-color: rgb(184, 217, 220);
+	border: 2px solid #424242;
+	border-radius: 10px;
+	padding: 10px 10px;
+	font-size: 20px;
+}
