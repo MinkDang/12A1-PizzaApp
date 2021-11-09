@@ -33,6 +33,5 @@
 /* Pricing on customisation pages */
 
 #live_pricing {
-	position: absolute;
-	left: 1000px;
+	margin-left: 50vw !important;
 }
