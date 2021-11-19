@@ -1,0 +1,49 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+  
+.tooltiptext {
+    visibility: hidden;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #CEDCDE;
+    color: #6C6061;
+    text-align: center;
+    padding: 0.5vh 1vh;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    transition: all .1s;
+    -webkit-box-shadow: 0.25vh 0.5vh 0.5vh rgba(0, 0, 0, 0.15);
+            box-shadow: 0.25vh 0.5vh 0.5vh rgba(0, 0, 0, 0.15);
+    border-radius: 0.5vh;
+    white-space: nowrap;
+}
+
+/* Top row */
+.top {
+    bottom: 130%;
+}
+
+/* Bottom row */
+.bottom {
+    top: 125%;
+}
+
+/* Mobile Support */
+.left, .right {
+    left: 0.1%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
