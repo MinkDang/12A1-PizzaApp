@@ -164,18 +164,13 @@ function imposeMinMax(el) {
 
 // Log quantity
 function log_quantity() {
-    if (isNaN(parseInt(document.querySelector('input[min="1"]').value))) {
+    const el = document.querySelector('input[min="1"]')
+    quantity_choice = Math.min(30, Math.max(parseInt(el.value), 1))
+
+    if (isNaN(quantity_choice)) {
         quantity_choice = 0;
     }
-    else if (parseInt(document.querySelector('input[min="1"]').value) > 30) {
-        quantity_choice = 30;
-    }
-    else if (parseInt(document.querySelector('input[min="1"]').value) < 1) {
-        quantity_choice = 1;
-    }
-    else {
-        quantity_choice = parseInt(document.querySelector('input[min="1"]').value);
-    }
+
     cal_and_display();
 }
 
