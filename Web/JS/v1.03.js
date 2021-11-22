@@ -103,7 +103,6 @@ function later() {
 // Log time
 function log_time() {
     time = document.querySelector('input[type="datetime-local"]').value.replace('T', ' ');
-    console.log(time);
 }
 
 // ********************* Pizza base
@@ -138,7 +137,6 @@ function toppings_array(top_type) {
         base_price -= toppings_prices[top_type];
         
         base_price_load();
-        console.log(toppings_choice);
     }
     // If toppings NOT ADDED
     else {
@@ -147,7 +145,6 @@ function toppings_array(top_type) {
         base_price += toppings_prices[top_type];
         
         base_price_load();
-        console.log(toppings_choice);
     }
 }
 
@@ -322,14 +319,16 @@ function push_obj() {
             paid: paid_choice
         }
     )
-    console.log(order_summary);
+
     display_orders();
 }
 
+// Reset form stub
 function reset_field() {
     alert("Not available");
 }
 
+// Inject order_summary
 function display_orders() {
     strStList = "";
     for (let i = 0; i < order_summary.length; i++) {
@@ -344,6 +343,7 @@ function display_orders() {
     document.querySelector('textarea[cols = "90"]').value = strStList;
 }
 
+// First record
 order_summary = [
     {
         ID: 1, deli : true, t: "2021-10-20 10:20", f_name: "Minh", l_name: "Dang", phone: "0414243454", 

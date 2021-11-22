@@ -14,7 +14,7 @@
 
 	<body onload="price_load(base_price); display_orders();">
 		<!-- Live price -->
-		<h1 id = "price_label">Price: <strong id = "price_display"></strong></h1>
+		<h1 id="price_label">Price: <strong id="price_display"></strong></h1>
 
 		<!-- Top left logo -->
 		<div id="logo">
@@ -47,7 +47,13 @@
 			</div>
 
 			<div class="nohover" id="time_selection">
-				<input type="datetime-local" name="time" onchange=log_time() required readonly/>
+				<input
+					type="datetime-local"
+					name="time"
+					onchange="log_time()"
+					required
+					readonly
+				/>
 			</div>
 		</div>
 
@@ -57,43 +63,76 @@
 			<!-- First Name -->
 			<div class="nohover" id="f_name">
 				<h2 style="margin-right: 10px">First Name</h2>
-				<input type="text" name="f_name" style="text-transform: capitalize;" pattern="[a-zA-Z\s]+$" oninput="this.reportValidity()" required />
+				<input
+					type="text"
+					name="f_name"
+					style="text-transform: capitalize"
+					pattern="[a-zA-Z\s]+$"
+					oninput="this.reportValidity()"
+					required
+				/>
 			</div>
 
 			<!-- Last Name -->
 			<div class="nohover" id="l_name">
 				<h2 style="margin-right: 10px">Last Name</h2>
-				<input type="text" name="l_name" style="text-transform: capitalize;" pattern="[a-zA-Z\s]+$" oninput="this.reportValidity()" required />
+				<input
+					type="text"
+					name="l_name"
+					style="text-transform: capitalize"
+					pattern="[a-zA-Z\s]+$"
+					oninput="this.reportValidity()"
+					required
+				/>
 			</div>
 
 			<!-- Phone -->
 			<div class="nohover" id="phone">
 				<h2 style="margin-right: 10px">Phone Number</h2>
-				<input type="tel" name="phone" pattern="[0-9]{10}" maxlength=10 oninput="this.reportValidity()" required/>
+				<input
+					type="tel"
+					name="phone"
+					pattern="[0-9]{10}"
+					maxlength="10"
+					oninput="this.reportValidity()"
+					required
+				/>
 			</div>
 
 			<!-- Suburb -->
 			<div class="nohover" id="suburb">
 				<h2 style="margin-right: 10px">Suburb</h2>
-				<input type="text" name="suburb" style="text-transform: capitalize;" pattern="[a-zA-Z]*" oninput="this.reportValidity()"/>
+				<input
+					type="text"
+					name="suburb"
+					style="text-transform: capitalize"
+					pattern="[a-zA-Z]*"
+					oninput="this.reportValidity()"
+				/>
 			</div>
 
 			<!-- Postcode -->
 			<div class="nohover" id="postcode">
 				<h2 style="margin-right: 10px">Postcode</h2>
-				<input type="tel" name="postcode" pattern="[0-9]{4}" oninput="this.reportValidity()" maxlength=4/>
+				<input
+					type="tel"
+					name="postcode"
+					pattern="[0-9]{4}"
+					oninput="this.reportValidity()"
+					maxlength="4"
+				/>
 			</div>
 
 			<!-- Address -->
 			<div class="nohover" id="street">
 				<h2 style="margin-right: 10px">Address</h2>
-				<input type="text" name="address"/>
+				<input type="text" name="address" />
 			</div>
 
 			<!-- Store -->
 			<div class="nohover" id="store">
 				<h2 style="margin-right: 10px">Store</h2>
-				<select name="store" id = "test" style="width: 150px;">
+				<select name="store" id="test" style="width: 150px">
 					<option value="Glebe">Glebe</option>
 					<option value="Redfern" selected>Redfern</option>
 					<option value="Paddington">Paddington</option>
@@ -156,10 +195,15 @@
 		<h1>Step 6: Select Quantity</h1>
 		<div class="box">
 			<div class="nohover">
-				<input type="number" min="1" max="30" value="1" 
-				onkeyup="imposeMinMax(this);" 
-				oninput=log_quantity() 
-				onkeydown="return (event.keyCode!=189 && event.keyCode!=187 && event.keyCode!=43 && event.keyCode!=32);">
+				<input
+					type="number"
+					min="1"
+					max="30"
+					value="1"
+					onkeyup="imposeMinMax(this);"
+					oninput="log_quantity()"
+					onkeydown="return (event.keyCode!=189 && event.keyCode!=187 && event.keyCode!=43 && event.keyCode!=32);"
+				/>
 			</div>
 		</div>
 
@@ -167,62 +211,62 @@
 		<h1>Step 7: Payment</h1>
 		<div class="box vertical">
 			<div class="nohover">
-				<div class="tooltip nohover" style="margin-top: 5px;">
-					<img src="../Assets/SVGs/info.svg" alt="Information icon"/>
+				<div class="tooltip nohover" style="margin-top: 5px">
+					<img src="../Assets/SVGs/info.svg" alt="Information icon" />
 					<span class="tooltiptext top left">
 						<table>
 							<tbody>
-							<tr>
-								<td>American Express</td>
-								<td>3400 0000 0000 009</td>
-							</tr>
-							<tr>
-								<td>Carte Blanche</td>
-								<td>3000 0000 0000 04</td>
-							</tr>
-							<tr>
-								<td>Discover</td>
-								<td>6011 0000 0000 0004</td>
-							</tr>
-							<tr>
-								<td>Diners Club</td>
-								<td>3852 0000 0232 37</td>
-							</tr>
-							<tr>
-								<td>enRoute</td>
-								<td>2014 0000 0000 009</td>
-							</tr>
-							<tr>
-								<td>JCB</td>
-								<td>3530 111333300000</td>
-							</tr>
-							<tr>
-								<td>MasterCard</td>
-								<td>5500 0000 0000 0004</td>
-							</tr>
-							<tr>
-								<td>Solo</td>
-								<td>6334 0000 0000 0004</td>
-							</tr>
-							<tr>
-								<td>Switch</td>
-								<td>4903 0100 0000 0009</td>
-							</tr>
-							<tr>
-								<td>Visa</td>
-								<td>4111 1111 1111 1111</td>
-							</tr>
-							<tr>
-								<td>Laser</td>
-								<td>6304 1000 0000 0008</td>
-							</tr>
+								<tr>
+									<td>American Express</td>
+									<td>3400 0000 0000 009</td>
+								</tr>
+								<tr>
+									<td>Carte Blanche</td>
+									<td>3000 0000 0000 04</td>
+								</tr>
+								<tr>
+									<td>Discover</td>
+									<td>6011 0000 0000 0004</td>
+								</tr>
+								<tr>
+									<td>Diners Club</td>
+									<td>3852 0000 0232 37</td>
+								</tr>
+								<tr>
+									<td>enRoute</td>
+									<td>2014 0000 0000 009</td>
+								</tr>
+								<tr>
+									<td>JCB</td>
+									<td>3530 111333300000</td>
+								</tr>
+								<tr>
+									<td>MasterCard</td>
+									<td>5500 0000 0000 0004</td>
+								</tr>
+								<tr>
+									<td>Solo</td>
+									<td>6334 0000 0000 0004</td>
+								</tr>
+								<tr>
+									<td>Switch</td>
+									<td>4903 0100 0000 0009</td>
+								</tr>
+								<tr>
+									<td>Visa</td>
+									<td>4111 1111 1111 1111</td>
+								</tr>
+								<tr>
+									<td>Laser</td>
+									<td>6304 1000 0000 0008</td>
+								</tr>
 							</tbody>
 						</table>
 					</span>
 				</div>
-				
-				<div class="nohover" style="margin-left: 10px;">
-					<select id="CardType" style="width: 200px;">
+
+				<div class="nohover" style="margin-left: 10px">
+					<select id="CardType" style="width: 200px">
 						<option value="AmEx">American Express</option>
 						<option value="CarteBlanche">Carte Blanche</option>
 						<option value="DinersClub">Diners Club</option>
@@ -240,27 +284,38 @@
 				</div>
 			</div>
 			<div class="nohover">
-				<input type="text" id="CardNumber" maxlength="24" size="24" placeholder="Credit Card number">
+				<input
+					type="text"
+					id="CardNumber"
+					maxlength="24"
+					size="24"
+					placeholder="Credit Card number"
+				/>
 			</div>
 		</div>
 
-		<div id = "submit_reset">
+		<div id="submit_reset">
 			<!-- Submit -->
-			<div class="box" id = "submit" onclick=push_obj()>
-				<h2 style="cursor: pointer;">Submit</h2>
+			<div class="box" id="submit" onclick="push_obj()">
+				<h2 style="cursor: pointer">Submit</h2>
 			</div>
 
 			<!-- Clear field -->
-			<div class="box" id = "reset" style = "margin-left: 50px;" onclick=reset_field()>
-				<h2 style="cursor: pointer;">Reset</h2>
-			</div>	
+			<div
+				class="box"
+				id="reset"
+				style="margin-left: 50px"
+				onclick="reset_field()"
+			>
+				<h2 style="cursor: pointer">Reset</h2>
+			</div>
 		</div>
 
 		<!-- Array of Records -->
 		<h1>Array of Records</h1>
 		<p>* "Null" means No entry</p>
 		<div class="box">
-			<textarea cols = "90" rows = "10" readonly></textarea>
+			<textarea cols="90" rows="10" readonly></textarea>
 		</div>
 	</body>
 </html>
