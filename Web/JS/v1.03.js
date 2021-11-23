@@ -16,7 +16,7 @@ function price_load(price_element) {
 
 // Base price display, checking for quantity
 function base_price_load() {
-    if (quantity_price != 0.00) {
+    if (quantity_price != 0.00 || quantity_activation) {
         cal_and_display();
     }
     else {
@@ -37,6 +37,7 @@ base_prices = {'supreme': 17.65, 'cheese': 5.50, 'margherita': 4.00}; // List of
 toppings_prices = {'anchovies': 2.00, 'jalapenos': 2.00, 'olives': 2.00, 'parmesan': 1.30}; // List of objects -- Topping: Price
 toppings_choice = []; // Declare array for Toppings
 paid_choice = false; // Default paid value
+quantity_activation = false; // Flag for quantity
 
 // ********************* Delivery type
 // Delivery btn
@@ -164,24 +165,20 @@ function imposeMinMax(el) {
 
 // Log quantity
 function log_quantity() {
-    if (isNaN(parseInt(document.querySelector('input[min="1"]').value))) {
+    const el = document.querySelector('input[min="1"]')
+    quantity_choice = Math.min(30, Math.max(parseInt(el.value), 1))
+
+    if (isNaN(quantity_choice)) {
         quantity_choice = 0;
     }
-    else if (parseInt(document.querySelector('input[min="1"]').value) > 30) {
-        quantity_choice = 30;
-    }
-    else if (parseInt(document.querySelector('input[min="1"]').value) < 1) {
-        quantity_choice = 1;
-    }
-    else {
-        quantity_choice = parseInt(document.querySelector('input[min="1"]').value);
-    }
+
     cal_and_display();
 }
 
 // Update price
 function cal_and_display() {
     quantity_price = base_price * quantity_choice;
+    quantity_activation = true; // Fix no price update when quantity is selected before base and toppings.
     price_load(quantity_price);
 }
 
