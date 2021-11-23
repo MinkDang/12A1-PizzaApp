@@ -142,12 +142,12 @@ function log_time() {
 // ********************* Pizza base
 
 function change_base(base_id) {
-    base_prices_keys = ['supreme', 'cheese', 'margherita']; // Reset array
+    let base_prices_keys = ['supreme', 'cheese', 'margherita']; // Reset array
     base_prices_keys.splice(base_prices_keys.indexOf(base_id.id),1); // Remove CURRENT base out of array
 
     // Turn OFF background color of OTHER base
     for (let i = 0; i < base_prices_keys.length; i++) { 
-         color_change(false, false, base_prices_keys[i]);
+        color_change(false, false, base_prices_keys[i]);
     }
 
     color_change(true, true, base_id.id);
@@ -239,25 +239,25 @@ function capitalizeFirstLetter(string) {
 
 // Validate phone
 function validate_phone(phone) {
-    const regex = /[0-9]{10}/;
+    let regex = /[0-9]{10}/;
     return(regex.test(phone));
 }
 
 // Validate postcode
 function validate_postcode(pc) {
-    const regex = /[0-9]{4}/;
+    let regex = /[0-9]{4}/;
     return(regex.test(pc));
 }
 
 // Validate name, suburb
 function validate_name(name) {
-    const regex = /^[A-Za-z\s]+$/;
+    let regex = /^[A-Za-z\s]+$/;
     return(regex.test(name));
 }
 
 // Validate address
 function validate_loc(loc) {
-    const regex = /\d+[ ](?:[A-Za-z0-9.-]+[ ]?)+(?:Avenue|Lane|Road|Boulevard|Drive|Street|Ave|Dr|Rd|Blvd|Ln|St|Cl)\.?/;
+    let regex = /\d+[ ](?:[A-Za-z0-9.-]+[ ]?)+(?:Avenue|Lane|Road|Boulevard|Drive|Street|Ave|Dr|Rd|Blvd|Ln|St|Cl)\.?/;
     return(regex.test(loc));
 }
 
@@ -308,7 +308,7 @@ function push_obj() {
         store_selection = null;
     }
     else {
-        select = document.getElementById('test');
+        select = document.querySelector('select[style="width: 150px"]');
         store_selection = select.options[select.selectedIndex].value;
         suburb_choice = null;
         postcode_choice = null;
@@ -317,22 +317,22 @@ function push_obj() {
 
     if (typeof base_choice == 'undefined') {
         alert("Please complete Step 4");
-        return true;
+        return;
     }
 
     if (toppings_choice.length == 0) {
         alert("Please select at least 1 topping");
-        return false;
+        return;
     }
 
     if (quantity_choice == 0) {
         alert("Invalid quantity");
-        return false;
+        return;
     }
 
     testCreditCard();
     if (pay_attempt) {
-        return false;
+        return;
     }
 
     order_summary.push(
@@ -391,7 +391,7 @@ function reset_field() {
     clearInterval(livetime_now);
 
     // Turn variables to undefined for validation purposes
-    unset_variables = [deli_type, time, base_choice, suburb_choice, postcode_choice, loc_choice, store_selection];
+    let unset_variables = [deli_type, time, base_choice, suburb_choice, postcode_choice, loc_choice, store_selection];
     for (let i = 0; i < unset_variables.length; i++) { 
         delete unset_variables[i];
     }
@@ -402,7 +402,7 @@ function reset_field() {
 
 // Inject order_summary
 function display_orders() {
-    strStList = "";
+    let strStList = "";
     for (let i = 0; i < order_summary.length; i++) {
         strStList += order_summary[i].ID + " - Delivery: " + order_summary[i].deli
             + " - " + order_summary[i].t + " - " + order_summary[i].f_name + ' - ' + order_summary[i].l_name 
